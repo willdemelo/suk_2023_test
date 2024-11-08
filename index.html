@@ -264,6 +264,14 @@ var unrelatedSurveyQuestions = [
    ]
  };
 
+ const save_data = {
+   type: jsPsychPipe,
+   action: "save",
+   experiment_id: "g4EDTsGKfpJp",
+   filename: filename,
+   data_string: ()=>jsPsych.data.get().csv()
+ }
+
  // Add trials to the timeline
  timeline.push(welcome);
  timeline.push(instructions);
@@ -271,16 +279,10 @@ var unrelatedSurveyQuestions = [
  timeline.push(satisfaction);
  timeline.push(demographics);
  timeline.push(gender);
+ timeline.push(save_data);
 
  // Run the experiment
  jsPsych.run(timeline);
- 
- const save_data = {
-   type: jsPsychPipe,
-   action: "save",
-   experiment_id: "g4EDTsGKfpJp",
-   filename: filename,
-   data_string: ()=>jsPsych.data.get().csv()
- };
+
  </script>
 </html>
