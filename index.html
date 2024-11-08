@@ -18,10 +18,12 @@
    }
  });
 
- var timeline = [];
-  
  const subject_id = jsPsych.randomization.randomID(10);
  const filename = `${subject_id}.csv`;
+  
+ var timeline = [];
+  
+
             
  // Welcome message
  var welcome = {
@@ -270,7 +272,7 @@ var unrelatedSurveyQuestions = [
    experiment_id: "g4EDTsGKfpJp",
    filename: filename,
    data_string: ()=>jsPsych.data.get().csv()
- }
+ };
 
  // Add trials to the timeline
  timeline.push(welcome);
